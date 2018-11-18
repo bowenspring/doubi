@@ -898,10 +898,10 @@ JQ_install(){
 		cd "${ssr_folder}"
 		if [[ ${bit} = "x86_64" ]]; then
 			mv "jq-linux64" "jq"
-			#wget --no-check-certificate "https://github.com/veip007/doubi/blob/master/other/jq-linux64" -O ${jq_file}
+			#wget --no-check-certificate "https://raw.githubusercontent.com/veip007/doubi/master/other/jq-linux64" -O ${jq_file}
 		else
 			mv "jq-linux32" "jq"
-			#wget --no-check-certificate "https://github.com/veip007/doubi/blob/master/other/jq-linux32" -O ${jq_file}
+			#wget --no-check-certificate "https://raw.githubusercontent.com/veip007/doubi/master/other/jq-linux32" -O ${jq_file}
 		fi
 		[[ ! -e ${jq_file} ]] && echo -e "${Error} JQ解析器 重命名失败，请检查 !" && exit 1
 		chmod +x ${jq_file}
